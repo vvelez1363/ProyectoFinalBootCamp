@@ -61,21 +61,6 @@ const InfoEnergia = () => {
         como el sol, el viento y el agua. Se caracterizan por ser inagotables y por no generar emisiones de gases de efecto invernadero.
       </p>
 
-      <h2 className="mb-4">Tipos de Energías Renovables</h2>
-      <Row className="justify-content-center">
-        {tarjetas.map((card, index) => (
-          <Col key={index} xs={12} sm={6} md={4} lg={2} className="mb-4">
-            <Card className="h-100 shadow energia-card">
-              <Card.Img variant="top" src={card.imagen} className="card-img-top-custom" />
-              <Card.Body className="d-flex flex-column justify-content-start">
-                <Card.Title className="text-center mt-2">{card.titulo}</Card.Title>
-                <Card.Text className="text-justify mt-2">{card.texto}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-
       {/* Sección Beneficios */}
       <section className="my-5">
         <h2 className="text-center mb-4">Beneficios de las Energías Renovables</h2>
