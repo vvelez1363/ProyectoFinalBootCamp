@@ -46,7 +46,7 @@ const Bienvenida = () => {
             <button className="boton-empezar" onClick={irAPrincipal}>EXPLORA!</button>
           </div>
           <div className="bienvenida-footer">
-            <p className="bienvenida-autor">Desarrollado por Andrea Castaño</p>
+            <p className="bienvenida-autor">Desarrollado por Valentina Velez Castrillon</p>
           </div>
         </div>
       </section>
