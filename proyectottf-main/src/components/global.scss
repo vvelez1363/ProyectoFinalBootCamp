@@ -1,0 +1,453 @@
+/* === RESET GLOBAL & TIPOGRAFÍA === */
+body,
+h1, h2, h3, h4, h5, h6,
+p, label, span, div, a,
+strong, em, small {
+  color: black !important;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+input, textarea, select {
+  color: black !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: none;
+
+  &::placeholder {
+    color: black !important;
+    opacity: 1;
+  }
+}
+
+/* === BOTONES UNIVERSALES === */
+.btn-estilo-base {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #00a97a;
+    color: white !important;
+    transform: scale(1.03);
+    border-color: #00a97a;
+  }
+}
+
+/* === BOTONES ESPECÍFICOS === */
+.custom-regresar,
+.btn-success {
+  @extend .btn-estilo-base;
+}
+
+.btn-ver-estimador {
+  @extend .btn-estilo-base;
+  background-color: #00796b;
+  border-color: #004d40;
+  color: white !important;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #004d40;
+    border-color: #00251a;
+    transform: scale(1.05);
+  }
+}
+
+.btn-estadisticas {
+  @extend .btn-estilo-base;
+  background-color: #005b96;
+  border-color: #003f6f;
+  color: white !important;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #003f6f;
+    border-color: #001f3f;
+    transform: scale(1.05);
+  }
+}
+
+/* === PÁGINA DE BIENVENIDA === */
+.bienvenida-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fondo-imagen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.bienvenida-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+
+.bienvenida-titulo {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.bienvenida-texto {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.boton-empezar {
+  @extend .btn-estilo-base;
+}
+
+.bienvenida-footer {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* === SECCIÓN INFOENERGÍA === */
+.card-img-top-custom {
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.energia-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.card-text {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* === ESTIMADOR RENOVABLE === */
+
+// Fondo principal del estimador
+.fondo-estimador {
+  background: url('../aseets/ahorrar.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Tarjeta con efecto glass
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  color: black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  .form-label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.3);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .btn {
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+  }
+
+  .alert {
+    border-radius: 12px;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    margin-top: 1rem;
+  }
+}
+
+/* === BOTÓN ESTILO ELEGANTE === */
+
+.btn-elegante {
+  background-color: #00796b;
+  border: 2px solid #004d40;
+  color: white !important;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-elegante:hover {
+  background-color: #004d40;
+  border-color: #00251a;
+  transform: scale(1.05);
+}
+
+.btn-icon {
+  background-color: #00a97a;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 50;
+
+  &:hover {
+    background-color: #007f5f;
+    transform: scale(1.1);
+  }
+}
+
+.acordeon-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  padding: 2rem;
+  text-align: center;
+  color: white; // ajusta según fondo
+}
+
+.acordeon-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pagina {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+// Sección de bienvenida (pantalla completa con fondo)
+.seccion-bienvenida {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.fondo-imagen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.bienvenida-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  color: white;
+  padding: 2rem;
+}
+
+// Sección de información
+.seccion-info {
+  padding: 4rem 2rem;
+  background-color: #f5f5f5;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .info-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-texto {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .info-imagen {
+    flex: 1;
+    min-width: 300px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/* === BOTÓN NUEVO PERSONALIZADO === */
+
+
+.btn-nuevo {
+  @extend .btn-estilo-base;
+  background-color: #00a97a; // verde naturaleza
+  border-color: #00a97a;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(34, 139, 34, 0.3); // sombra verde
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #2e7d32;
+    border-color: #1b5e20;
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.4);
+  }
+}
+
+.contenedor-graficos {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-grafico {
+  background-color: rgba(255, 255, 255, 0.85); /* Blanco con transparencia */
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+.contenido-fondo-blanco {
+  background-image: url('../aseets/paneles.jpg');
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.boton-empezar {
+  background: linear-gradient(135deg, #00c896, #00796b);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background: linear-gradient(135deg, #009a79, #005f53);
+    transform: scale(1.05);
+  }
+}
+
+.infografia-beneficio {
+  background: #f9f9f9;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.03);
+    background-color: #e0f7fa;
+  }
+}
+
+.comparativa-card {
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+.comparativa-card {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
